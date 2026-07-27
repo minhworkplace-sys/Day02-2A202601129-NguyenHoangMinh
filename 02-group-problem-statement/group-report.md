@@ -47,17 +47,18 @@ Nhóm có thể dùng bảng này để bước tiếp theo là gom trùng, shor
 
 | Cluster | Candidates included | Pattern chung | Ghi chú |
 |---|---|---|---|
-| Tổng hợp thông tin từ nhiều nguồn | Nguyễn Hoàng Minh, Nguyễn Gia Thiều, Phùng Hồng Phước, Vũ Minh Quang | Cần gom dữ liệu rời rạc từ nhiều nguồn rồi chuyển thành một bản tóm tắt / báo cáo có ý nghĩa | Đây là cluster có workflow rõ nhất và dễ đo bằng thời gian |
+| Tổng hợp thông tin từ nhiều nguồn | Nguyễn Hoàng Minh, Nguyễn Gia Thiều, Phùng Hồng Phước, Lê Công Dũng, Vũ Minh Quang | Cần gom dữ liệu rời rạc từ nhiều nguồn rồi chuyển thành một bản tóm tắt / báo cáo có ý nghĩa | Đây là cluster có workflow rõ nhất và dễ đo bằng thời gian |
 | Quản lý task, deadline và action items | Nguyễn Đào Nam Hải, Trần Đức Mạnh, Lương Ngọc Quang, Nguyễn Xuân Phượng | Thông tin bị phân tán giữa nhiều kênh, dễ bỏ sót deadline hoặc task quan trọng | Có thể sử dụng workflow capture → classify → prioritize |
 | Tạo draft nhanh từ dữ liệu có sẵn | Phạm Trung Kiên, Lê Nguyễn Minh Đức | Cần chuyển dữ liệu thô thành draft chuẩn trước khi người thật review | Đây là cluster phù hợp hơn với Rule/Workflow hơn là Agent toàn năng |
+| Xử lý tài liệu và email pháp lý | Nguyễn Quốc Thịnh | Cần xử lý dữ liệu phi cấu trúc và hồ sơ có yêu cầu chính xác, bảo mật và kiểm tra pháp lý | Impact cao nhưng khác domain với các cluster còn lại; scope rộng và khó validate trong thời gian lab |
 
 ## Phase 3.3 — Shortlist và chọn candidate
 
-| Candidate | Actor rõ | Workflow rõ | Pain có evidence | Impact đo được | Làm trong lab | So sánh Rule / Workflow / Agent | Tổng |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Tổng hợp báo cáo tiến độ dự án từ nhiều nguồn | 5 | 5 | 4 | 5 | 5 | 5 | 29 |
-| Viết báo cáo thực tập hàng tuần từ GitHub, Jira, Discord | 4 | 4 | 4 | 4 | 4 | 4 | 24 |
-| Tổng hợp thông báo và tạo Daily Checklist cường độ cao | 4 | 4 | 4 | 4 | 4 | 4 | 24 |
+| Candidate | Actor rõ | Workflow rõ | Pain có evidence | Impact đo được | Làm trong lab | So sánh Rule / Workflow / Agent | Nhóm hiểu domain | Tổng |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Tổng hợp báo cáo tiến độ dự án từ nhiều nguồn | 5 | 5 | 4 | 5 | 5 | 5 | 5 | 34 |
+| Viết báo cáo thực tập hàng tuần từ GitHub, Jira, Discord | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 28 |
+| Tổng hợp thông báo và tạo Daily Checklist cường độ cao | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 28 |
 
 Nhóm chọn: Tổng hợp báo cáo tiến độ dự án từ nhiều nguồn.
 
@@ -71,7 +72,9 @@ Vì sao không chọn các bài khác:
 - Báo cáo thực tập: có ý nghĩa nhưng phạm vi phụ thuộc nhiều vào ngữ cảnh cá nhân và mentor.
 - Daily Checklist: phù hợp nhưng dễ trượt sang hệ thống thông báo và notification chung, scope rộng hơn.
 
-## Phase 4 — Quick validation
+## Phase 4.1 — Quick validation
+
+> Khi nộp chính thức, nhóm nên đính kèm ngày thực hiện, bộ câu hỏi và notes/screenshot ẩn danh để chứng minh số mẫu validation.
 
 | Nguồn | Số người | Tín hiệu xác nhận | Tín hiệu phản bác | Nhóm sửa problem thế nào |
 |---|---:|---|---|---|
@@ -81,7 +84,7 @@ Vì sao không chọn các bài khác:
 Insight sau validation:
 Pain thật không nằm ở việc “lấy số” đơn thuần. Pain nằm ở việc biến nhiều nguồn rời rạc thành một narrative đủ rõ, ngắn gọn và có thể dùng để quyết định.
 
-## Phase 4 — Research giải pháp
+## Phase 4.2 — Research giải pháp
 
 | Nguồn / tool / case | Link | Họ giải quyết phần nào? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
@@ -118,6 +121,30 @@ Fallback:
 AI draft sai hoặc nhạt → PM bỏ draft và tự viết lại.
 ```
 
+### Chi tiết current workflow
+
+| Bước | Actor | Input | Output | Thời gian / tần suất | Handoff |
+|---|---|---|---|---:|---|
+| 1. Export Jira | PM | Sprint/task data | File hoặc bảng số liệu | 10 phút / tuần | PM → tài liệu tổng hợp |
+| 2. Lấy metrics từ Sheets | PM | KPI và số liệu tuần | Bảng metrics | 10 phút / tuần | PM → tài liệu tổng hợp |
+| 3. Đọc Slack recap | PM | Thread/update trong tuần | Highlight, risk, context | 15 phút / tuần | PM → tài liệu tổng hợp |
+| 4. Tổng hợp vào Docs | PM | Jira + Sheets + Slack | Bản nháp report | 15 phút / tuần | PM → bước viết narrative |
+| 5. Viết narrative | PM | Raw data và bản nháp | Insight, highlight, risk, next action | 25 phút / tuần | PM → review |
+| 6. Review và format | PM | Draft report | Bản hoàn chỉnh | 10 phút / tuần | PM → leadership |
+| 7. Gửi report | PM | Bản đã duyệt | Weekly Report | 5 phút / tuần | PM → leadership |
+
+### Phạm vi pilot và future workflow
+
+Trong pilot đầu tiên, nhóm **chưa tự động kết nối Jira/Sheets/Slack**. PM sẽ paste các summary đã chọn vào prompt/template chuẩn để đo chất lượng AI draft. Chỉ khi pilot đạt target mới xem xét tự động hóa bước lấy dữ liệu.
+
+| Bước | Actor | Input | Output | Cách xử lý |
+|---|---|---|---|---|
+| 1. Chuẩn bị input | PM | Jira/Sheets/Slack summary | Bộ input có nguồn | Làm bán thủ công trong pilot |
+| 2. Cấu trúc dữ liệu | Workflow/Rule | Bộ input có nguồn | Dữ liệu theo format thống nhất | Không được tự thêm số liệu |
+| 3. Draft narrative | AI | Dữ liệu đã cấu trúc | Draft insight/highlight/risk/next action | Giữ nguồn hoặc đánh dấu phần chưa chắc |
+| 4. Review và edit | PM | Draft + nguồn gốc | Report được duyệt | PM kiểm tra số liệu và viết lại nếu cần |
+| 5. Gửi | PM | Report được duyệt | Report gửi leadership | Không tự động gửi trong pilot |
+
 ### Impact trước/sau
 
 | Metric | Trước | Sau kỳ vọng | Ghi chú |
@@ -131,17 +158,20 @@ AI draft sai hoặc nhạt → PM bỏ draft và tự viết lại.
 
 | Field | Nội dung |
 |---|---|
-| Actor | Junior PM chịu trách nhiệm viết weekly report cho leadership. |
-| Workflow | Export Jira → lấy metrics từ Sheets → đọc Slack → tổng hợp → viết narrative → review → gửi. |
-| Bottleneck | Viết narrative từ raw data mất khoảng 25 phút và dễ trễ deadline. |
-| Impact | Khoảng 90 phút/tuần/PM; report trễ làm leadership thiếu context trước buổi họp. |
+| Actor | Junior PM chịu trách nhiệm tổng hợp weekly report cho leadership. |
+| Workflow | PM lấy dữ liệu từ Jira, Sheets, Slack rồi tự tổng hợp, viết, review và gửi report. |
+| Bottleneck | Toàn bộ quá trình thủ công, đặc biệt là chuyển dữ liệu rời rạc thành narrative. |
+| Impact | Khoảng 90 phút/tuần/PM; report có thể trễ và leadership thiếu context trước buổi họp. |
 | Success Metric | Giảm thời gian tổng hợp từ 90 phút xuống dưới 30 phút; không tăng số câu hỏi sửa/hỏi lại từ leadership. |
 | Boundary | AI không tự gửi report, không tự bịa số liệu, không thay PM approve nội dung cuối. |
+
+**Điểm còn rộng ở v0:** “tự động hóa report” có thể bao gồm cả lấy dữ liệu, phân tích, viết và gửi; nhóm cần validation để xác định bước AI thực sự tạo giá trị.
 
 ## Rule / Workflow / Agent
 
 | Mức | Phương án | Khi nào đủ | Rủi ro | Chọn? |
 |---|---|---|---|---|
+| No AI / process fix | Template report + dashboard + checklist | Đủ nếu report chỉ cần số liệu cố định và người viết có thể tự tạo narrative | Không giảm nhiều effort khi phải tổng hợp context từ nhiều nguồn | Dùng làm fallback |
 | Rule | Template report, dashboard, checklist | Đủ nếu leadership chỉ cần số liệu và cấu trúc cố định | Không giải quyết tốt phần narrative mỗi tuần khác nhau | Không chọn làm toàn bộ |
 | Workflow | Script lấy data → AI cấu trúc → AI draft narrative → PM review | Hợp vì bottleneck nằm ở một bước ngôn ngữ cụ thể, PM vẫn kiểm soát | Draft có thể sai/nhạt, cần review | Chọn |
 | Agent | Agent tự lấy dữ liệu, phân tích, hỏi thêm, gửi report | Chỉ cần nếu workflow nhiều nhánh và cần tự lập kế hoạch | Quá rộng, dễ rủi ro và cần nhiều permission | Chưa chọn |
@@ -168,8 +198,20 @@ Vì sao:
 | AI intervention point | Sau khi dữ liệu từ Jira/Sheets/Slack được gom lại, trước bước PM viết narrative. |
 | Mức chọn | Workflow: rule/script lấy data, AI draft narrative, PM review. |
 | Rủi ro & người thật kiểm tra | Risk: hallucination, bỏ sót insight, narrative nhạt. Người thật review: PM kiểm số liệu và edit trước khi gửi. |
+| Cách đo pilot | Chạy trên 2 weekly reports; ghi thời gian chuẩn bị, thời gian PM edit, số lỗi/số liệu sai và phần trăm draft bị viết lại. |
+
+**Thay đổi từ v0 sang v1:** Nhóm không còn đề xuất tự động hóa toàn bộ report. Scope được thu hẹp thành workflow bán tự động: dữ liệu có nguồn → AI draft narrative → PM review → PM gửi.
 
 ## Final decision
+
+| Câu hỏi | Kết quả | Ghi chú |
+|---|---|---|
+| Actor và workflow đã rõ chưa? | Yes | Actor là PM; workflow có 7 bước và bottleneck ở viết narrative. |
+| Baseline và success metric đã đo được chưa? | Not Yet | Có baseline ban đầu 90 phút; cần đo lại trên 2 report thật. |
+| Có data/input đủ dùng chưa? | Yes, cho pilot bán thủ công | Dùng summary từ Jira/Sheets/Slack; chưa tự động tích hợp. |
+| Nếu AI sai, hậu quả có chấp nhận được không? | Yes, có điều kiện | Không gửi trực tiếp; PM kiểm tra trước khi dùng. |
+| Có người review/owner vận hành không? | Yes | PM là owner và reviewer cuối. |
+| Có cách non-AI đơn giản hơn không? | Yes | Template + dashboard + checklist vẫn là fallback. |
 
 Decision:
 Go với scope nhỏ.
