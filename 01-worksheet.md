@@ -166,16 +166,16 @@ Nếu vẫn bí ý tưởng, đọc nhanh các gợi ý dưới đây rồi quay
 
 | # | Lăng kính | Problem quan sát được | Ai chịu ảnh hưởng? | Dấu hiệu thật |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-| 9 | | | | |
-| 10 | | | | |
+| 1 |Lặp lại|PM phải viết PRD/User Story cho mỗi feature mới|Product Manager|Mỗi sprint đều dành vài giờ để viết tài liệu với cấu trúc gần như giống nhau|
+| 2 |Lặp lại|Team họp xong phải tổng hợp Meeting Minutes và Action Items|PM, Scrum Master|Sau mỗi cuộc họp đều phải ghi chép và gửi lại biên bản qua Slack/Email.|
+| 3 |Tốn thời gian|Tổng hợp báo cáo tiến độ dự án |PM|Cuối tuần phải lấy dữ liệu từ Jira, Git và nhiều nguồn khác để làm báo cáo.|
+| 4 |Tốn thời gian|Đánh giá tác động khi khách hàng đổi requirement|PM, Tech Lead|Phải họp nhiều người để xác định module nào bị ảnh hưởng và estimate lại.|
+| 5 |AI có thể hỗ trợ tốt hơn|Trả lời câu hỏi về tài liệu dự án|Developer, QA| Cùng một câu hỏi được hỏi nhiều lần mặc dù đã có tài liệu. |
+| 6 |AI có thể hỗ trợ tốt hơn|Sinh User Story, Acceptance Criteria, Test Case |PM,QA |Nội dung chủ yếu theo mẫu, chỉ thay đổi theo từng feature. |
+| 7 |AI có thể hỗ trợ tốt hơn|Tóm tắt cuộc họp và tạo Action Items|Cả Team |Mọi người không nhớ đầy đủ các quyết định hoặc việc cần làm sau cuộc họp.|
+| 8 |Khó khăn đến từ người khác|Thành viên cập nhật Jira không đầy đủ hoặc không đúng trạng thái|PM |Jira hiển thị "In Progress" nhưng thực tế task đã hoàn thành hoặc đang bị block. |
+| 9 |Khó khăn đến từ người khác|Khách hàng thay đổi requirement nhiều lần|PM, Developer |Feature phải sửa nhiều lần, estimate liên tục thay đổi. |
+| 10 |Khó khăn đến từ người khác|Khách hàng báo bug nhưng mô tả không đầy đủ|QA, Developer|Bug report chỉ ghi "không chạy" hoặc "bị lỗi", thiếu bước tái hiện (Steps to Reproduce), log hoặc ảnh chụp màn hình nên mất nhiều thời gian xác minh. |
 
 Gợi ý cho `Dấu hiệu thật`: mất bao lâu, xảy ra mấy lần/tuần, bao nhiêu người gặp, có log/ticket/review/comment không, nếu không sửa thì hậu quả là gì.
 
@@ -400,7 +400,7 @@ Mỗi người trình bày 3 candidates, mỗi candidate 1-2 phút:
 
 | # | Người đưa ra | Candidate problem | Người gặp vấn đề | Điểm nghẽn | Cảm nhận nhanh |
 |---|---|---|---|---|---|
-| 1 | | | | | |
+| 1 |Nguyễn Hoàng Minh|Tổng hợp báo cáo tiến độ dự án từ nhiều nguồn |PM/ Manager || |
 | 2 | | | | | |
 | 3 | | | | | |
 | 4 | | | | | |
